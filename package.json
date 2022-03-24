@@ -52,7 +52,7 @@
     "prettier": "2.6.0"
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,jsx,css,md,ts,tsx}": "prettier --write"
   },
   "config": {
     "commitizen": {
