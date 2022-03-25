@@ -1,5 +1,4 @@
-import React, { FormEvent } from 'react'
-import { cleanObject } from 'utils'
+import { FormEvent } from 'react'
 
 // interface Base {
 //   id: number
