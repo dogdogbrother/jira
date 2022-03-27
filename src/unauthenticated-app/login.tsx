@@ -1,34 +1,10 @@
 import { FormEvent } from 'react'
+import { useAuth } from 'context/auth-context'
 
-// interface Base {
-//   id: number
-// }
-//
-// interface Advance extends Base {
-//   name: string
-// }
-//
-// const test = (p: Base) => {
-// }
-//
-// // 鸭子类型(duck typing)：面向接口编程 而不是 面向对象编程
-// const a = {id: 1, name: 'jack'}
-// test(a)
 const apiUrl = process.env.REACT_APP_API_URL
 
 export const LoginScreen = () => {
-  const login = (param: { username: string; password: string }) => {
-    fetch(`${apiUrl}/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(param)
-    }).then(async (response) => {
-      if (response.ok) {
-      }
-    })
-  }
+  const { login } = useAuth()
 
   // HTMLFormElement extends Element
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
